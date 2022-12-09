@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/logofull.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
@@ -18,26 +18,26 @@ export const Footer = () => {
           <Col size={12} sm={6}>
           <ul className="footer-links">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="/#">Home</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="/#">About</a>
                     </li>
                     <li>
-                        <a href="#">Event</a>
+                        <a href="/#">Event</a>
                     </li>                
                 </ul>
                 </Col>
                 <Col size={12} sm={6}>
                 <ul className="footer-links">
                     <li>
-                        <a href="#">Team</a>
+                        <a href="/#">Team</a>
                     </li>
                     <li>
-                        <a href="#">Blog</a>
+                        <a href="/#">Blog</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="/#">Contact</a>
                     </li>
                 </ul>
           </Col></Row> </Container></Col>

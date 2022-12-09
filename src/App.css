@@ -31,8 +31,6 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
-  color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
 
@@ -100,6 +98,7 @@ nav.navbar.scrolled {
   /* box-shadow: inset 0 0 2000px rgb(25 25 25 / 90%); */
   box-shadow: inset 0 0 2000px rgb(128 128 151 / 90%);
 }
+
 nav.navbar a.navbar-brand {
     width: 9%;
 }
@@ -183,6 +182,7 @@ span.navbar-text {
 }
 .navbar-text button:hover {
   color: #121212;
+  border: none;
 }
 .navbar-text button:hover::before {
 	content: "";
@@ -234,6 +234,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
+}
+
+
+#LandingPage{
+  background-color: #121212 !important;
+  color: #fff !important;
 }
 
 /************ Banner Css ************/
@@ -504,7 +510,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ About Css ************/
+/************ Contact Css ************/
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   padding: 60px 0 200px 0;
@@ -576,14 +582,39 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
 }
 
-/************ Footer Css ************/
-.footer {
-  padding: 0 0 25px 0;
-  /* background-image: url('./assets/img/footer-bg.png'); */
-  background-position: center center;
+/************ Event Css ************/
+.eventBanner {
+  margin-top: 0;
+  padding: 260px 0 100px 0;
+  background-image: url('./assets/img/Events/EventBg.png');
+  background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  background: linear-gradient(90.21deg, rgb(54 147 170 / 37%) -5.91%, rgb(95 47 189 / 43%) 111.58%);
+  display: flex;
+  justify-content: center;
+}
+
+.eventDescription{
+  color: #8b8b8b; 
+  font-size: 1.3rem;
+  padding: 50px 100px;
+  margin: 0;
+  text-align: center;
+}
+
+@media (min-width: 1000px){
+  .eventBanner {
+  min-height: 100vh;
+}}
+
+/************ Footer Css ************/
+.footer {
+  /* background: linear-gradient(to left, rgb(15 97 150) -5.91%, rgb(177 226 229)); */
+  border-top: linear-gradient( rgb(74, 47, 189) 111.58%,  rgb(54, 147, 170) -5.91%)  solid 2px;
+  background: linear-gradient(90.21deg, rgb(54, 147, 170) -5.91%, rgb(74, 47, 189) 111.58%);
+  /* background: linear-gradient(90.21deg, #11277D,#45C0DB,#0E18A7); */
+  
+  box-shadow: inset 0 0 20px rgb(128 128 151 / 90%);
 }
 
 .footer-links{
@@ -661,7 +692,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 18px;
 }
 .footer img {
-  width: 26%;
+  width: 70%;
 }
 .footer p {
   font-weight: 400;

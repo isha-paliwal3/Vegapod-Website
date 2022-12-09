@@ -1,0 +1,45 @@
+.event{
+    background-color: #fff;
+}
+
+.eventItem{
+  width: 100%;
+  padding: 10%;
+  border: 1px hidden;
+  position: relative;
+}
+
+.EventHead{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#Heading_para{
+    color: #000;
+    background: #fff;
+}
+
+#Heading {
+    font-size: 4rem;
+    margin-top: 6vh;
+}
+
+@media (max-width:1200px) {
+
+  #Heading {
+    margin-top: -5vh;
+    margin-bottom: 10vh;
+    font-size: 3.5rem;
+}
+  
+}
+
+@media (max-width:600px) {
+
+  #Heading {
+    margin-top: -15vh;
+    font-size: 2.5rem;
+}
+  
+}
