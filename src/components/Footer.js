@@ -3,8 +3,10 @@ import logo from "../assets/img/logofull.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
+import { useNavigate } from 'react-router-dom';
 
 export const Footer = () => {
+  const navigate = useNavigate(); 
   return (
     <footer className="footer">
       <Container>
@@ -18,26 +20,26 @@ export const Footer = () => {
           <Col size={12} sm={6}>
           <ul className="footer-links">
                     <li>
-                        <a href="/#">Home</a>
+                        <a href="/"  onClick={() => navigate('/')}>Home</a>
                     </li>
                     <li>
-                        <a href="/#">About</a>
+                        <a href="/AboutPage" onClick={() => navigate('/AboutPage')}>About</a>
                     </li>
                     <li>
-                        <a href="/#">Event</a>
+                        <a href="/EventPage"  onClick={() => navigate('/EventPage')}>Event</a>
                     </li>                
                 </ul>
                 </Col>
                 <Col size={12} sm={6}>
                 <ul className="footer-links">
                     <li>
-                        <a href="/#">Team</a>
+                        <a href="/TeamPage" onClick={() => navigate('/TeamPage')}>Team</a>
                     </li>
                     <li>
-                        <a href="/#">Blog</a>
+                        <a href="/#"  onClick={() => navigate('/TeamPage')}>Blog</a>
                     </li>
                     <li>
-                        <a href="/#">Contact</a>
+                        <a href="/ContactPage"  onClick={() => navigate('/ContactPage')}>Contact</a>
                     </li>
                 </ul>
           </Col></Row> </Container></Col>

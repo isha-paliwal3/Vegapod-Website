@@ -126,18 +126,18 @@ export const About = () => {
                   <Tab.Container id="About-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Departments</Nav.Link>
+                        <Nav.Link eventKey="first" style={{cursor: "context-menu"}}>Departments</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link className="about_gal" eventKey="second">Gallery</Nav.Link>
+                        <Nav.Link className="about_gal" eventKey="second" style={{cursor: "context-menu"}}>Gallery</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Achievements</Nav.Link>
+                        <Nav.Link eventKey="third" style={{cursor: "context-menu"}}>Achievements</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                       <Tab.Pane eventKey="first">
-                        <Row>
+                        <Row style={{cursor: "context-menu"}}>
                           {
                             Department.map((about, index) => {
                               return (

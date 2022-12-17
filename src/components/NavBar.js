@@ -4,13 +4,11 @@ import logo from '../assets/img/logo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
-import { HashLink } from 'react-router-hash-link';
-import {
-  BrowserRouter as Router
-} from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+
 
 export const NavBar = () => {
-
+  const navigate = useNavigate(); 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
@@ -33,7 +31,6 @@ export const NavBar = () => {
   }
 
   return (
-    <Router>
       <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
@@ -44,10 +41,10 @@ export const NavBar = () => {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About</Nav.Link>
-              <Nav.Link href="#home" className={activeLink === 'team' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('team')}>Team</Nav.Link>
-              <Nav.Link href="#events" className={activeLink === 'events' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('events')}>Events</Nav.Link>
+              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => navigate('/')}>Home</Nav.Link>
+              <Nav.Link href="/AboutPage" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about') && navigate('/AboutPage')}>About</Nav.Link>
+              <Nav.Link href="/TeamPage" className={activeLink === 'team' ? 'active navbar-link' : 'navbar-link'} onClick={() => navigate('/TeamPage') && onUpdateActiveLink('team') }>Team</Nav.Link>
+              <Nav.Link href="/EventPage" className={activeLink === 'events' ? 'active navbar-link' : 'navbar-link'} onClick={() => navigate('/EventPage')}>Events</Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
@@ -55,13 +52,12 @@ export const NavBar = () => {
                 <a href="https://m.facebook.com/mitvegapodhyperloop/?__tn__=C-R"><img src={navIcon2} alt="" /></a>
                 <a href="https://www.instagram.com/vegapodhyperloop/"><img src={navIcon3} alt="" /></a>
               </div>
-              <HashLink to='#connect'>
-                <button className="vvd"><span>Let’s Connect</span></button>
-              </HashLink>
+             
+                <button className="vvd" onClick={() => navigate('/ContactPage')}><span>Let’s Connect</span></button>
+           
             </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </Router>
   )
 }
