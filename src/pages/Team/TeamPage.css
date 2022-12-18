@@ -36,6 +36,7 @@ p,a,h1,h2,h3,h4 {
 
 .section-team .single-person:hover {
 	background: linear-gradient(90.21deg, #3693aa -5.91%, #4A2FBD 111.58%);
+    color: #e19828;;
 }
 
 .section-team .single-person .person-image {
@@ -80,8 +81,15 @@ p,a,h1,h2,h3,h4 {
 
 .section-team .single-person .person-info .full-name {
 	margin-bottom: 10px;
-	font-size: 28px;
+	font-size: 24px;
     font-weight: 700;
+    text-align: center;
+}
+
+.section-team .single-person .person-info .department {
+	margin-bottom: 10px;
+	font-size: 20px;
+    text-align: center;
 }
 
 .section-team .single-person:hover .full-name {
